@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Millenium Car Rental</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="../../css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+	<script type="text/javascript">
+		$('.datepicker').pickadate();
+	</script>
+	<div th:replace="fragments/header :: header"></div>
+	<div class="container">
+		<hr />
+		<h2>Reservation en cours...</h2>
+		<hr />
+		<form th:action="@{/user/saveReservation}" th:object="${reservation}" method="post">
+			<label for="date">Date</label>
+			<div class="md-form">
+				<input id="date1" name="date" type="date" th:field="*{date}" th:value="${date}" />
+			</div>
+			<label for="promo">Promo</label>
+			<div class="md-form">
+				<input name="promo" type="checkbox" th:field="*{promotion}" />
+			</div>
+			<label for="datedebut">Date debut</label>
+			<div class="md-form">
+				<input name="datedebut" type="date" th:field="*{dateDebut}" />
+			</div>
+			<label for="datedebut">Date fin</label>
+			<div class="md-form">
+				<input name="datefin" type="date" th:field="*{dateFin}" />
+			</div>
+			<div class="md-form">
+				<input type="hidden" th:field="*{voiture}" />
+			</div>
+			<button type="submit" class="btn btn-primary">Valider</button>
+			<a th:href="@{/home}" class="btn btn-warning">Retour</a>
+		</form>
+	</div>
+	<div th:replace="fragments/footer :: footer"></div>
+	<!-- /Start your project here-->
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="../../js/tether.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="../../js/mdb.min.js"></script>
+</body>
+</html>

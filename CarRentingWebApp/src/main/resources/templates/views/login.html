@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Millenium Car Rental</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Start your project here-->
+	<div th:replace="fragments/header :: header"></div>
+	<hr />
+	<div class="container">
+		<!-- Purple Header -->
+		<div class="edge-header primary-color-dark"></div>
+		<!-- Main Container -->
+		<div class="free-bird" th:fragment="login">
+			<div class="row">
+				<div class="col-md-8 col-lg-7 mx-auto float-xs-none white z-depth-1 py-2 px-2">
+					<h2 class="h2-responsive">
+						<strong>Connectez-vous !</strong>
+					</h2>
+					<p>Entrez votre adresse mail et votre mot de passe</p>
+					<!--Naked Form-->
+					<div class="card-block">
+						<!--Body-->
+						<form th:action="@{/login}" method="POST">
+							<!--Email validation-->
+							<div class="md-form">
+								<i class="fa fa-envelope prefix"></i>
+								<input type="email" name="email" id="email" class="form-control validate">
+								<label for="email">Adresse mail</label>
+							</div>
+							<!--Textarea with icon-->
+							<div class="md-form">
+								<i class="fa fa-key prefix"></i>
+								<input type="password" name="password" id="password" class="form-control validate">
+								<label for="password">Mot de passe</label>
+							</div>
+							<div class="text-xs-left">
+								<button class="btn primary-color-dark" type="Submit">Connexion</button>
+								<span class="rch-create-account"> ou <a href="javascript:void(0);" th:href="@{/register}">Créez un compte</a></span><br class="clearfix">
+							</div>
+							<div align="center" th:if="${param.error}">
+								<p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+							</div>
+						</form>
+					</div>
+					<!--Naked Form-->
+				</div>
+			</div>
+		</div>
+		<!-- /.Main Container -->
+	</div>
+	<hr />
+	<div th:replace="fragments/footer :: footer"></div>
+	<!-- /Start your project here-->
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/tether.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+</html>

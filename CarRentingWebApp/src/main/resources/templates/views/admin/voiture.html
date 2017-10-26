@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Millenium Car Rental</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="../css/mdb.min.css" rel="stylesheet">
+<body>
+	<!--Navbar-->
+	<nav class="navbar navbar-toggleable-md navbar-dark bg-primary">
+		<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#"> <strong>DASHBOARD - Administrateur</strong>
+			</a>
+			<div class="collapse navbar-collapse" id="navbarNav1">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item "><a th:href="@{/admin/listReservation}" class="nav-link">Reservations </a></li>
+					<li class="nav-item active"><a th:href="@{/admin/listVoiture}" class="nav-link">Voitures <span class="sr-only">(current)</span></a></li>
+					<li class="nav-item"><a th:href="@{/admin/listResponsable}" class="nav-link">Responsables</a></li>
+					<li class="nav-item"><a th:href="@{/admin/listUser}" class="nav-link">Utilisateurs</a></li>
+				</ul>
+				<div sec:authorize="isAnonymous()">
+					<form class="form-inline">
+						<ul class="nav navbar-nav">
+							<li class="nav-item"><a class="nav-link" th:href="@{/login}"><i class="fa fa-sign-in"></i> Connexion</a></li>
+						</ul>
+					</form>
+				</div>
+				<div sec:authorize="isAuthenticated()">
+					<form class="form-inline">
+						<ul class="nav navbar-nav">
+							<li class="nav-item"><a class="nav-link" th:href="@{/logout}"><i class="fa fa-sign-in"></i> Se deconnecter(<span sec:authentication="name">Bob</span>)</a></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!--/.Navbar-->
+	<div class="container">
+		<hr />
+		<h2>Ajout d'une voiture...</h2>
+		<hr />
+		<form action="#" th:action="@{/admin/saveVoiture}" th:object="${voiture}" method="post">
+			<label>Marque</label>
+			<div class="md-form">
+				<input type="text" th:field="*{marque}" />
+			</div>
+			<label>Model</label>
+			<div class="md-form">
+				<input type="text" th:field="*{model}" />
+			</div>
+			<label>Type Carburant</label>
+			<div class="md-form">
+				<input type="text" th:field="*{typeCarburant}" />
+			</div>
+			<label>Cylindres</label>
+			<div class="md-form">
+				<input type="text" th:field="*{nbCylindre}" />
+			</div>
+			<label>Type de transmission</label>
+			<div class="md-form">
+				<input type="text" th:field="*{typeTransmission}" />
+			</div>
+			<label>Prix</label>
+			<div class="md-form">
+				<input type="text" th:field="*{prix}" />
+			</div>
+			<div class="md-form">
+				<input class="btn btn-default" type="submit" value="Confirmer" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>

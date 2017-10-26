@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Material Design Bootstrap</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+<!-- Your custom styles (optional) -->
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<!--Footer-->
+	<footer class="page-footer center-on-small-only primary-color-dark" th:fragment="footer">
+		<!--Footer Links-->
+		<div class="container-fluid">
+			<div class="row">
+				<!--Second column-->
+				<div class="col-lg-3 col-md-4 offset-lg-2">
+					<div>
+						<h5 class="title">Aide et informations</h5>
+					</div>
+					<ul>
+						<li><a th:href="@{/apropos}">A propos de nous</a></li>
+						<li><a th:href="@{/contact}">Nous contacter</a></li>
+						<li><a th:href="@{/faq}">Foire aux questions</a></li>
+					</ul>
+				</div>
+				<!--/.Second column-->
+				<hr class="hidden-md-up">
+				<!--Third column-->
+				<div class="col-lg-4 col-md-4">
+					<div>
+						<h5 class="title">Conditions</h5>
+					</div>
+					<ul>
+						<li><a th:href="@{/charte}">Notre charte de confidentialite</a></li>
+						<li><a th:href="@{/condition}">Nos conditions de vente</a></li>
+						<li><a th:href="@{/affiliation}">Notre programme d'affiliation</a></li>
+					</ul>
+				</div>
+				<!--/.Third column-->
+				<hr class="hidden-md-up">
+				<!--Fourth column-->
+				<div class="col-lg-3 col-md-4">
+					<h5 class="title">Quelques liens rapides</h5>
+					<ul>
+						<li><a th:href="@{/villes}">Villes populaires</a></li>
+						<li><a th:href="@{/aeroports}">Aeroports populaires</a></li>
+						<li><a href="#!">Langues</a></li>
+					</ul>
+				</div>
+				<!--/.Fourth column-->
+			</div>
+		</div>
+		<!--/.Footer Links-->
+		<hr>
+		<!--Call to action-->
+		<div class="call-to-action">
+			<ul>
+				<li>
+					<h5>Inscription gratuite</h5>
+				</li>
+				<li><a class="btn btn-danger waves-effect waves-light" th:href="@{/register}">S'inscrire</a></li>
+			</ul>
+		</div>
+		<!--/.Call to action-->
+		<!--Copyright-->
+		<div class="footer-copyright">
+			<div class="container-fluid">
+				© 2017 Copyright: <a href="http://www.emsi.ma"> EMSI </a>
+			</div>
+		</div>
+		<!--/.Copyright-->
+	</footer>
+	<!--/.Footer-->
+</body>
+</html>

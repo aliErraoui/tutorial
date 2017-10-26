@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Millenium Car Rental</title>
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+		<!-- Start your project here-->
+		<div th:replace="fragments/header :: header"></div>
+		<hr />
+		    <!--Main layout-->
+    <div class="container">
+        <h1 class="h1-responsive">Vous avez une question ?</h1>
+        <hr>
+        <p>Vous pouvez toujours nous <a href="contact.html">contacter </a>mais avant de le faire, prenez le temps de consulter notre liste de questions fréquemment posées. La réponse que vous cherchez est peut être ici...</p>
+
+        <div class="container">
+            <br />
+            <div class="" id="accordion">
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Que dois-je prendre pour retirer le véhicule ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="card-block">
+                            À la prise en charge du véhicule, le conducteur principal doit avoir une carte de paiement à son nom avec suffisamment de fonds disponibles pour couvrir la franchise/le dépôt de garantie et régler les frais locaux, l'équipement en option et tout autre achat effectué au comptoir de location de voitures. Le conducteur principal et tous les conducteurs supplémentaires auront besoin de fournir un permis de conduire complet en leur nom, ainsi que leur bon/evoucher Rentalcars.com qui est délivré après confirmation de la réservation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Puis-je louer une voiture si je n'ai pas de carte de crédit ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Lors de la prise en charge de la voiture, vous devrez laisser un dépôt de garantie ; veuillez s'il-vous-plaît vous référer à la rubrique “Dépôt de garantie, Franchise et Couvertures” des conditions de vente. Ce dépôt garantit que le client peut couvrir les dommages au véhicule et/ou à l'équipement.
+                            Il s'agit d'une pratique standard de toutes les sociétés de location de voitures, prenant généralement la forme d'un montant bloqué sur la carte de crédit du conducteur principal. Dans la section “Au sujet du paiement”, les conditions de vente indiqueront quels types de cartes sont acceptées.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">Quels moyens de paiement acceptez-vous ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Rentalcars.com accepte la plupart des moyens de paiement tels que : carte de crédit, carte de débit, carte virtuelle, prépayée, post-payée, Switch/Maestro, MasterCard, American Express et Bancomat. Nous acceptons également les virements bancaires et prélèvements automatiques.
+                            <br>Important : Le conducteur principal doit obligatoirement posséder une carte de crédit valide en son nom lors de la prise en charge du véhicule pour la caution.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">Quelles sont les exigences du loueur relatives au permis de conduire ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Au comptoir, chaque conducteur doit présenter un permis de conduire dont il doit être titulaire depuis au moins un an (parfois deux ans). Les permis périmés ou provisoires ne seront pas acceptés.
+                            Le personnel sur place peut aussi avoir besoin de vérifier si vous n’avez pas de points retirés de votre permis. Si celui-ci a été délivré en Angleterre, au Pays de Galles ou en Ecosse, vous avez besoin de vous renseigner sur les importants changements qui ont été introduits le 8 juin 2015.
+                            Si des points vous ont été retirés ou que votre permis a été révoqué, veuillez s'il-vous-plaît nous contacter dès que possible, car cela pourrait limiter vos options de location.
+                            Si vous louez une voiture à l'étranger, veuillez s'il-vous-plaît vérifier votre bon afin de voir si vous avez besoin d'un permis de conduire international en plus de votre permis de conduire national d’origine.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">Comment puis-je modifier ma réservation/ajouter mon numéro de vol ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Vous pouvez modifier votre réservation en ligne en utilisant notre fonction modification. Il suffit de vous connecter et de cliquer sur Ma réservation ou Mon compte et d'effectuer
+                            les changements nécessaires. Rentalcars.com ne charge pas de frais d'administration pour modifier ou changer les réservations. Toutefois, la modification de votre réservation peut engendrer
+                            un changement de tarif ou de prix, tout comme des frais qui peuvent être dûs à un changement de la durée de la location ou du type de voiture. Vous pouvez également modifier/ajouter votre numéro de vol sous cette même rubrique.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6">Que dois-je faire si je n'ai pas reçu mon bon de confirmation ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Vous pouvez contrôler et modifier le statut de votre réservation à tout moment en vous connectant sur Ma réservation ou votre compte ;
+                            le bon de confirmation vous sera envoyé une fois le paiement total de la réservation perçu.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7">Comment puis-je créer un compte ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Créer un compte est l'une des façons les plus faciles de gérer toutes vos réservations : passées, présentes ou futures. Sur la page d'accueil du site, sur le côté droit de la barre d'outils, vous trouverez le bouton “Mon compte”.
+
+                            Cliquez sur “Connexion”.
+                            Entrez l'adresse email et le mot de passe que vous souhaitez utiliser.
+                            Vous recevrez un email qui vous demandera de valider votre compte. Cliquez sur le bouton “Vérifiez votre compte” maintenant.
+                            Une fois ceci terminé, vous serez en mesure de vous connecter et de gérer toutes vos réservations depuis la section “réservation” de votre compte.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8">Y a-t-il des frais supplémentaires à payer sur place ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Alors que Millenium Car Rental propose des tarifs tout compris, il se peut que des frais puissent vous être chargés sur place. Tous les frais locaux seront à régler directement à la société de location de voitures à la signature du contrat de location. Les frais suivants pourraient ainsi vous être imputés :
+
+                            Les frais d'utilisation des installations : taxe d'aéroport pour contribuer à la construction et au maintien d'installations
+                            Les frais d'équipement de saison d'hiver : pour couvrir le coût de l'équipement supplémentaire nécessaire durant la période d'hiver
+                            Les autres articles que vous choisissez sur place.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9">Ma voiture est-elle autorisée à traverser les frontières ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Si vos plans de voyage incluent la conduite en dehors du pays de location, comme le franchissement des frontières ou un déplacement entre différentes îles d'un même pays, veuillez s'il vous plaît informer notre équipe au moins 7 jours avant la prise en charge du véhicule.
+                            Des restrictions peuvent s'appliquer pour certains pays et nous pourrions avoir besoin de contacter l'agence de location. Dans certains cas, il se peut qu'une couverture supplémentaire se révèle nécessaire, celle-ci étant à régler sur place, nous vous informerons si elle s'applique ou pas à votre demande.
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10">Qu'est ce que la politique de carburant ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Chaque société de location de voitures présente ses propres politiques de carburant, consultables pendant le processus de réservation. Votre politique de carburant sera indiquée sur votre bon de confirmation et le contrat de location au comptoir de location de voitures.
+                            Si vous louez pour trois jours ou moins, vous devriez confirmer ceci au fournisseur au moment de la location pour qu'il soit en mesure de vous porposer une politique de carburant alternative et ainsi, mieux adaptée.
+                            La plupart des entreprises de location de voitures exigera un dépôt de garantie ou un paiement au début de la location pour couvrir les coûts de carburant. Tant que la voiture est retournée dans un état en conformité avec la politique de carburant, le dépôt de garantie sera remboursé à la restitution de la voiture.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11">Comment puis-je annuler ma réservation ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse11" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Pour annuler votre réservation, veuillez vous connecter sur Modifier/Annuler ma réservation et cliquer sur Annuler ma réservation. Il s'agit de la façon la plus rapide et la plus facile d'annuler votre réservation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12">Quelles sont les conditions d'annulation ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse">
+                        <div class="card-block">
+                            L'intégralité des conditions de vente de notre politique d'annulation peut être consultée sur notre site à la rubrique Nos conditions de vente.
+                            RÉSERVATIONS PAYÉES INTÉGRALEMENT AU MOMENT DE LEUR CRÉATION : Peuvent être annulées en ligne sans frais jusqu'à 48 heures avant le début de la location. Les réservations annulées dans les 48 heures avant le début de la location seront facturées un montant égal à une location de 3 jours. Les frais d'annulation ne seront jamais supérieurs au coût de la location en cours.
+                            RÉSERVATIONS AVEC ACOMPTE : Les annulations faites plus de 48 heures avant le début de la location seront facturées d'un montant égal au montant de l'accompte versé. Les réservations annulées dans les 48 heures avant le début de la location seront facturées un montant égal à une location de 3 jours ou le montant de l'accompte versé suivant le montant le plus élevé.
+                            NO SHOW/ABSENCE : Ceci s'applique dans le cas où le véhicule ne peut être pris en charge faute de documentation, dans l'incapacité de fournir une carte de crédit valide contenant des fonds suffisants pour couvrir le montant de la caution, et/ou non-prise en charge de la voiture à l'heure et/ou la date spécifiées sur votre bon de confirmation. Aucun remboursement ne sera accordé pour les no-shows.
+
+                            Veuillez noter : certaines sociétés de location de voitures peuvent également avoir une politique d'annulation supplémentaire, assurez-vous de vérifier les conditions de vente de votre location.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse13">Quelles assurances sont incluses dans ma location ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse13" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Tous les contrats de voitures de location doivent comporter la couverture partielle en cas de collision (CDW) et la protection en cas de vol (TP). Les deux protections seront :
+                            <br>
+                            - soit comprises dans le forfait de Millenium Car Rental,<br>
+                            - soit fournies par la compagnie de carte de crédit du client.<br>
+                            Le type de couverture dépendra de la société de location de voitures et de son emplacement ; mais celle-ci sera toujours clairement présentée dans les conditions de vente au cours du processus de réservation, mais aussi sur le bon de confirmation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse14">Que dois-je faire lorsque la voiture m'est finalement présentée ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse14" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Prenez quelques minutes sur place chez le loueur afin de vous familiariser avec le véhicule. Vérifier ses phares, ses feux de détresse, ses essuie-glaces, ses serrures, sa roue de secours, etc. Faites le tour du véhicule de location avec un agent avant de quitter le lieu de location.
+                            Assurez-vous de déceler les moindre rayures, bosses, etc. et de les signaler afin qu'il n'y ait pas de confusion quant à l'état de la voiture à son retour. Il est conseillé de prendre des photos de la voiture de location avant sa prise en charge et après sa restitution.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse15">Pourquoi dois-je signer un contrat sur place ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse15" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Millenium Car Rental intervient en tant qu'agent de location de véhicules. Les réservations effectuées par notre biais sont soumises à nos conditions de vente.
+                            Celles-ci couvrent votre contrat avec nous et seront fournies avec la documentation de votre location, en plus d'être disponibles sur notre site Web.
+                            La location en cours de votre véhicule sera alors soumise à la législation du pays dans lequel il vous est fourni et pour cette raison il vous sera demandé de signer un contrat de location avec le fournisseur. Vous devez être tenu de comprendre (et d'accepter) les conditions de vente du contrat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse16">Comment puis-je éviter des frais supplémentaires à la restitution du véhicule ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse16" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Assurez-vous de restituer votre voiture de location à l'heure et la date indiquées sur votre bon de confirmation afin d'éviter des frais pour les heures et/ou jours supplémentaires. Voir aussi votre contrat de location pour les tarifs des heures/jours additionnels.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse17">Que dois-je faire si la voiture tombe en panne, ou si je suis impliqué dans un accident ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse17" class="panel-collapse collapse">
+                        <div class="card-block">
+                            En cas de panne/d'accident ou de problèmes mécaniques, vous devrez appeler la société de location de voitures immédiatement. Le fournisseur devra autoriser toute réparation et tout véhicule de remplacement. Conservez les copies de tous les documents justificatifs que vous serez amenés à compléter.
+                            Cela pourra être nécessaire, en particulier dans le cadre d'une demande d'indemnité. Pour les accidents, un rapport de police et un rapport d'incident de l'agence seront nécessaires.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse18">J'ai terminé ma location et j'ai une requête à adresser. Que dois-je faire et vers qui m'orienter ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse18" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Si vous avez des questions relatives à votre location terminée, veuillez vous connecter à <a href="#" data-target="#modal-contact" data-toggle="modal">Contactez-nous</a> et remplir le formulaire en ligne.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="card-header">
+                        <h6 class="card-header">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse19">Vais-je devoir laisser un dépôt de garantie au moment de retirer ma voiture ?</a>
+                        </h6>
+                    </div>
+                    <div id="collapse19" class="panel-collapse collapse">
+                        <div class="card-block">
+                            Oui. Sur place, le personnel vous demandera de laisser un dépôt de garantie au cas où la voiture est endommagée ou volée durant votre location. Le montant du dépôt sera bloqué temporairement sur la carte de crédit/débit du conducteur principal et ce, pendant toute la durée de la location.
+                            <br>Tant que vous ramenez le véhicule en bon état à la fin de la location, cette somme sera débloquée/retournée sous sept jours ouvrables.
+                            <br>Si la carte du conducteur principale ne dispose pas de suffisamment de fonds pour pouvoir bloquer le dépôt, vous ne serez en aucun cas autorisé à prendre la voiture - ou le personnel sur place exigera que vous lui achetiez une couverture supplémentaire.
+                            <br>Il s'agit d'une pratique courante parmi les sociétés de location de voitures.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <style>
+            .faqHeader {
+                font-size: 27px;
+                margin: 20px;
+            }
+
+            .panel-heading [data-toggle="collapse"]:after {
+                font-family: 'Glyphicons Halflings';
+                content: "e072"; /* "play" icon */
+                float: right;
+                color: #F58723;
+                font-size: 18px;
+                line-height: 22px;
+                /* rotate "play" icon from > (right arrow) to down arrow */
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+            }
+
+            .panel-heading [data-toggle="collapse"].collapsed:after {
+                /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+                color: #454444;
+            }
+        </style>
+
+
+    </div>
+    <!--/.Main layout-->
+		<hr />
+		<div th:replace="fragments/footer :: footer"></div>
+
+		<!-- /Start your project here-->
+		<!-- SCRIPTS -->
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="js/tether.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

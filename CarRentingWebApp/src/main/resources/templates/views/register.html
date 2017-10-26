@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Millenium Car Rental</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Start your project here-->
+	<div th:replace="fragments/header :: header"></div>
+	<hr />
+	<div class="container">
+		<!-- Purple Header -->
+		<div class="edge-header primary-color-dark"></div>
+		<!-- Main Container -->
+		<div class="container free-bird">
+			<div class="row">
+				<div class="col-md-8 col-lg-7 mx-auto float-xs-none white z-depth-1 py-2 px-2">
+					<h2 class="h2-responsive">
+						<strong>Votre compte !</strong>
+					</h2>
+					<p>Entrez vos données personnelles</p>
+					<!--Naked Form-->
+					<div class="card-block">
+						<!--Body-->
+						<form th:action="@{/register}" th:object="${user}" method="post">
+							<div class="md-form">
+								<i class="fa fa-user prefix"></i>
+								<input type="text" id="form1" class="form-control" th:field="*{name}">
+								<label for="form2">Nom</label>
+							</div>
+							<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="validation-message"></label>
+							<div class="md-form">
+								<i class="fa fa-user prefix"></i>
+								<input type="text" id="form2" class="form-control" th:field="*{lastName}">
+								<label for="form2">Prenom</label>
+							</div>
+							<label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="validation-message"></label>
+							<!--Email validation-->
+							<div class="md-form">
+								<i class="fa fa-envelope prefix"></i>
+								<input type="email" id="form3" class="form-control validate" th:field="*{email}">
+								<label for="form3">Adresse mail</label>
+							</div>
+							<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="validation-message"></label>
+							<!--Textarea with icon-->
+							<div class="md-form">
+								<i class="fa fa-key prefix"></i>
+								<input type="text" id="form4" class="form-control validate" th:field="*{password}">
+								<label for="form4">Mot de passe</label>
+							</div>
+							<label th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="validation-message"></label>
+							<div class="text-xs-left">
+								<button class="btn primary-color-dark" type="Submit">Valider</button>
+							</div>
+						</form>
+						<span th:utext="${successMessage}"></span>
+					</div>
+					<!--Naked Form-->
+				</div>
+			</div>
+		</div>
+		<!-- /.Main Container -->
+	</div>
+	<hr />
+	<div th:replace="fragments/footer :: footer"></div>
+	<!-- /Start your project here-->
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/tether.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Millenium Car Rental</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+<style rel="stylesheet">
+/* TEMPLATE STYLES */
+main {
+	margin-top: 3rem;
+}
+
+main .card {
+	margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.read-more {
+		text-align: center;
+	}
+}
+</style>
+</head>
+<body>
+	<!-- Start your project here-->
+	<div th:replace="fragments/header :: header"></div>
+	<main>
+	<div class="container">
+		<div th:replace="fragments/slider :: slider"></div>
+		<hr />
+		<!--First row-->
+		<div class="row">
+			<hr />
+			<div th:if="${not #lists.isEmpty(voitures)}">
+				<h2>Nos voitures</h2>
+				<hr />
+				<div class="row">
+					<div class="col-lg-4" th:each="voiture : ${voitures}">
+						<div class="card">
+							<img class="img-fluid" src="http://kingofwallpapers.com/abstract-car-wallpaper/abstract-car-wallpaper-010.jpg" alt="Card image cap">
+							<div class="card-block">
+								<h4 class="card-title" th:text="${voiture.marque + ' ' + voiture.model}"></h4>
+								<div class="card-text">
+									<ul>
+										<li th:text="'Transmission: '+${voiture.typeTransmission}"></li>
+										<li th:text="'Carburant: '+${voiture.typeCarburant}"></li>
+										<li th:text="'Cylindre: '+${voiture.nbCylindre}"></li>
+										<li th:text="'Prix: '+${voiture.prix + ' DHs'}"></li>
+									</ul>
+								</div>
+								<a th:href="${'user/reservation/' + voiture.voitureId}" class="btnbtn-primary">Reserver</a>
+							</div>
+							<!--/.Card content-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.Second row-->
+	</div>
+	</main>
+	<hr />
+	<div th:replace="fragments/footer :: footer"></div>
+	<!-- /Start your project here-->
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/tether.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+
+</body>
+</html>

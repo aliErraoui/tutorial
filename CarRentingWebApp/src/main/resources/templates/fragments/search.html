@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Material Design Bootstrap</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+<!-- Your custom styles (optional) -->
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<!--Main layout-->
+	<div class="container" th:fragment="search">
+		<div class="container">
+			<br />
+			<div class="" id="accordion">
+				<div class="card ">
+					<div class="card-header">
+						<h6 class="card-header">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Filtrer</a>
+						</h6>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="card-block">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-lg-3 col-md-4 offset-lg-1">
+										<ul>
+											<li><div class="btn-group">
+													<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 50px; width: 170px">Categorie</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">cat1</a>
+													</div>
+												</div></li>
+											<br>
+											<li><div class="btn-group">
+													<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 50px; width: 170px">Marque</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">cat1</a>
+													</div>
+												</div></li>
+											<br>
+											<li><div class="btn-group">
+													<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 50px; width: 170px">Motorisation</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">cat1</a>
+													</div>
+												</div></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<style>
+.faqHeader {
+	font-size: 27px;
+	margin: 20px;
+}
+
+.panel-heading [data-toggle="collapse"]:after {
+	font-family: 'Glyphicons Halflings';
+	content: "e072"; /* "play" icon */
+	float: right;
+	color: #F58723;
+	font-size: 18px;
+	line-height: 22px;
+	/* rotate "play" icon from > (right arrow) to down arrow */
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.panel-heading [data-toggle="collapse"].collapsed:after {
+	/* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	color: #454444;
+}
+</style>
+</body>
+</html>
